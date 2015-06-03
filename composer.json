@@ -31,11 +31,13 @@
 	"scripts": {
 		"post-install-cmd": [
 			"php artisan clear-compiled",
-			"php artisan optimize"
+			"php artisan optimize",
+            "'php artisan docs:clone"
 		],
 		"post-update-cmd": [
 			"php artisan clear-compiled",
-			"php artisan optimize"
+			"php artisan optimize",
+            "php artisan docs:pull"
 		],
 		"post-create-project-cmd": [
 			"php -r \"copy('.env.example', '.env');\"",
