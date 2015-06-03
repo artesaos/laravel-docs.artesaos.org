@@ -4,6 +4,7 @@
 /build/sami/build
 /build/sami/cache
 /node_modules
+/.rocketeer
 composer.phar
 .env.*
 .env
