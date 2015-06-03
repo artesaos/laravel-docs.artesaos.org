@@ -58,7 +58,7 @@ class Idea extends Eloquent {
 		</div>
 	</div>
 	<a href="#features" class="next-up">
-		Poderosas, Características Modernas
+		Características Poderosas e Modernas
 		<img src="/assets/img/down-arrow.png">
 	</a>
 </section>
