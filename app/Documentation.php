@@ -38,10 +38,10 @@ class Documentation {
 	 * @param  string  $version
 	 * @return string
 	 */
-	public function getIndex($version)
+	public function getIndex($version, $lang="pt_BR")
 	{
-		return $this->cache->remember('docs.'.$version.'.index', 5, function() use ($version) {
-			$path = base_path('resources/docs/'.$version.'/documentation.md');
+		return $this->cache->remember('docs.'.$version.'.index', 5, function() use ($version, $lang) {
+			$path = base_path('resources/docs/'.$version.'/'.$lang.'/documentation.md');
 
 			if ($this->files->exists($path)) {
 				return $this->replaceLinks($version, markdown($this->files->get($path)));
@@ -58,10 +58,10 @@ class Documentation {
 	 * @param  string  $page
 	 * @return string
 	 */
-	public function get($version, $page)
+	public function get($version, $page, $lang='pt_BR')
 	{
-		return $this->cache->remember('docs.'.$version.'.'.$page, 5, function() use ($version, $page) {
-			$path = base_path('resources/docs/'.$version.'/'.$page.'.md');
+		return $this->cache->remember('docs.'.$version.'.'.$page, 5, function() use ($version, $page, $lang) {
+			$path = base_path('resources/docs/'.$version.'/'.$lang.'/'.$page.'.md');
 
 			if ($this->files->exists($path)) {
 				return $this->replaceLinks($version, markdown($this->files->get($path)));
@@ -90,10 +90,10 @@ class Documentation {
 	 * @param  string  $page
 	 * @return boolean
 	 */
-	public function sectionExists($version, $page)
+	public function sectionExists($version, $page, $lang='pt_BR')
 	{
 		return $this->files->exists(
-			base_path('resources/docs/'.$version.'/'.$page.'.md')
+			base_path('resources/docs/'.$version.'/'.$lang.'/'.$page.'.md')
 		);
 	}
 

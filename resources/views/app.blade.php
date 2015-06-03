@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>{{ isset($title) ? $title . ' - ' : null }}Laravel - The PHP Framework For Web Artisans</title>
+	<title>{{ isset($title) ? $title . ' - ' : null }} Laravel - O Framework PHP para Artesãos da Web</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="author" content="Taylor Otwell">
 	<meta name="description" content="Laravel - The PHP framework for web artisans.">
@@ -44,19 +44,19 @@
 		<ul>
 			@include('partials.main-nav')
 		</ul>
-		<p>Laravel is a trademark of Taylor Otwell. Copyright &copy; Taylor Otwell.</p>
+		<p>Laravel é uma marca registrada de Taylor Otwell. Copyright &copy; Taylor Otwell.</p>
 		<p class="less-significant"><a href="http://jackmcdade.com">Design by Jack McDade</a></p>
 	</footer>
 	<script src="/assets/js/laravel.js"></script>
-	<script src="/assets/js/viewport-units-buggyfill.js"></script>
-	<script>window.viewportUnitsBuggyfill.init();</script>
-    <script>
-        var _gaq=[['_setAccount','UA-23865777-1'],['_trackPageview']];
-        (function(d,t){
-            var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-            s.parentNode.insertBefore(g,s)
-        }(document,'script'));
-    </script>
+	{{--<script src="/assets/js/viewport-units-buggyfill.js"></script>--}}
+	{{--<script>window.viewportUnitsBuggyfill.init();</script>--}}
+    {{--<script>--}}
+        {{--var _gaq=[['_setAccount','UA-23865777-1'],['_trackPageview']];--}}
+        {{--(function(d,t){--}}
+            {{--var g=d.createElement(t),s=d.getElementsByTagName(t)[0];--}}
+            {{--g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';--}}
+            {{--s.parentNode.insertBefore(g,s)--}}
+        {{--}(document,'script'));--}}
+    {{--</script>--}}
 </body>
 </html>

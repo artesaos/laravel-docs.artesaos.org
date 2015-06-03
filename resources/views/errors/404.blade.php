@@ -11,7 +11,7 @@ the-404
 			<img src="/assets/img/lamp-post.jpg">
 		</div>
 		<div class="content">
-			<h1>You seem to have upset the delicate internal balance of my housekeeper.</h1>
+			<h1>O arquivo que você está procurando não existe ou ainda não foi traduzido. Participe da <a href="https://github.com/artesaos/laravel-docs">tradução</a> no <a href="https://github.com/artesaos/laravel-docs">Github</a>.</h1>
 		</div>
 	</div>
 

@@ -15,7 +15,7 @@
 	</ul>
 
 	<div class="slide-docs-nav">
-		<h2>Documentation</h2>
+		<h2>Documentação</h2>
 		{!! $index !!}
 	</div>
 

@@ -22,8 +22,8 @@ home
 
 <section class="panel statement light">
 	<div class="content">
-		<h1>Love beautiful code? We do too.</h1>
-		<p>The PHP Framework For Web Artisans</p>
+		<h1>Gosta de código bonito? Nós também.</h1>
+		<p>O Framework PHP para os Artesãos da Web</p>
 		<div class='browser-window'>
 			<div class='top-bar'>
 				<div class='circles'>
@@ -40,13 +40,13 @@ home
 class Idea extends Eloquent {
 
 	/**
-	 * Dreaming of something more?
+	 * Sonhando com algo mais?
 	 *
 	 * @with Laravel
 	 */
 	 public function create()
 	 {
-	 	// Have a fresh start...
+	 	// Tenha um bom início...
 	 }
 
 }
@@ -58,19 +58,21 @@ class Idea extends Eloquent {
 		</div>
 	</div>
 	<a href="#features" class="next-up">
-		Powerful, Modern Features
+		Poderosas, Características Modernas
 		<img src="/assets/img/down-arrow.png">
 	</a>
 </section>
 
 <section class="panel features dark" id="features">
-	<h1>Did someone say rapid?</h1>
-	<p>Elegant applications delivered at warp speed.</p>
+	<h1>Alguém disse ráido?</h1>
+	<p>Aplicações elegantes entregues em velocidade dobrada.</p>
 		<div class="blocks stacked">
 			<div class="block odd">
 				<div class="text">
-					<h2>Expressive, beautiful syntax.</h2>
-					<p>Value elegance, simplicity, and readability? You’ll fit right in. Laravel is designed for people just like you. If you need help getting started, check out <a href="https://laracasts.com">Laracasts</a> and our <a href="/docs">great documentation</a>.</p>
+					<h2>Expressiva e linda sintaxe.</h2>
+                    <p>
+                        Valoriza elegância, simplicidade e legibilidade? Você vai se encaixar bem. Laravel é projetado para pessoas como você. Se você precisar de ajuda para começar, veja o <a href="https://codecasts.com.br">Codecasts</a> e nossa <a href="/docs">grande documentação</a>.
+                    </p>
 				</div>
 				<div class="media">
 
@@ -104,8 +106,11 @@ class Purchase implements ShouldBeQueued {
 			</div><!-- /.block -->
 			<div class="block even">
 				<div class="text">
-					<h2>Tailored for your team.</h2>
-					<p>Whether you're a solo developer or a 20 person team, Laravel is a breath of fresh air. Keep everyone in sync using Laravel's database agnostic <a href="/docs/migrations">migrations</a> and <a href="/docs/schema">schema builder</a>.</p>
+					<h2>Sob medida para sua equipe.</h2>
+                    <p>
+                        Não importa se você é um lobo solitário ou uma equipe gigante, Laravel é uma brisa de renovação.
+                        Matenha todos em sincronia usando as <a href="/docs/migrations">migrações de banco de dados</a> agnósticas e o  <a href="/docs/schema">construtor de schemas</a> do Laravel.
+                    </p>
 				</div>
 				<div class="media">
 					<div class="terminal-window">
@@ -128,8 +133,9 @@ Migrated: 2015_01_13_162508_create_servers_table
 			</div><!-- /.block -->
 			<div class="block odd">
 				<div class="text">
-					<h2>Modern toolkit. Pinch of magic.</h2>
-					<p>An <a href="/docs/eloquent">amazing ORM</a>, painless <a href="/docs/routing">routing</a>, powerful <a href="/docs/queues">queue library</a>, and <a href="/docs/authentication">simple authentication</a> give you the tools you need for modern, maintainable PHP. We sweat the small stuff to help you deliver amazing applications.
+					<h2>Kit de Ferramentas Modernas.</h2>
+					<p>Um <a href="/docs/eloquent">excelente ORM</a>, <a href="/docs/routing">rotas</a> rotas sem sofrimento, <a href="/docs/queues">filas</a> poderosas, e <a href="/docs/authentication">autenticação simples</a> lhe darão as ferramentas que você precisa para modernizar e manter seu PHP.
+                        Nós melhoramos os pequenos detalhes para ajudar você a entregar aplicações surpreendentes.
 				</div>
 				<div class="media">
 
@@ -157,39 +163,39 @@ Route::get('/user/{id}', function($id)
 				</div>
 			</div><!-- /.block -->
 		</div>
-		<a href="#ecosystem" class="next-up">
-			The Laravel Ecosystem
-			<img src="/assets/img/down-arrow.png">
-		</a>
-	</section>
+		{{--<a href="#ecosystem" class="next-up">--}}
+			{{--The Laravel Ecosystem--}}
+			{{--<img src="/assets/img/down-arrow.png">--}}
+		{{--</a>--}}
+	{{--</section>--}}
 
-	<section class="panel ecosystem light" id="ecosystem">
-		<h1>The Laravel Ecosystem</h1>
-		<p>Revolutionize how you build the web.</p>
+	{{--<section class="panel ecosystem light" id="ecosystem">--}}
+		{{--<h1>Ecossistema do Laravel</h1>--}}
+		{{--<p>RevolucioneRevolutionize how you build the web.</p>--}}
 
-		<div class="forge contain">
-			<img src="/assets/img/forge-macbook.png" alt="Forge Dashboard" class="screenshot">
-			<div class="content">
-				<a href="https://forge.laravel.com">
-					<img src="/assets/img/forge-logo.png" alt="Forge">
-				</a>
-				<p>Instant PHP Platforms On Linode, DigitalOcean, and more. Push to deploy, PHP 5.6, HHVM, queues, and everything you need to launch and deploy amazing Laravel applications.</p>
-				<p>Launch your application in minutes!</p>
-			</div>
-		</div>
-		<div class="tiles">
-			<div class="tile">
-				<h2><a href="/docs/homestead">Homestead</a></h2>
-				<p>The official Laravel local development environment. Powered by Vagrant, Homestead gets your entire team on the same page with the latest PHP, MySQL, Postgres, Redis, and more.</p>
-			</div>
-			<div class="tile">
-				<h2><a href="https://laracasts.com">Laracasts</a></h2>
-				<p>Hundreds (yes, hundreds) of Laravel and PHP video tutorials with new videos added every week! Skim the basics or start your journey to Laravel mastery. All for the price of lunch.</p>
-			</div>
-			<div class="tile">
-				<h2>Power Packed</h2>
-				<p>Laravel is amazing out of the box, but there's more to explore! Let <a href="/docs/billing">Cashier</a> make subscription billing painless, or use <a href="/docs/authentication#social-authentication">Socialite</a> to authenticate with Facebook, Twitter, and more.</p>
-			</div>
-		</div>
-	</section>
+		{{--<div class="forge contain">--}}
+			{{--<img src="/assets/img/forge-macbook.png" alt="Forge Dashboard" class="screenshot">--}}
+			{{--<div class="content">--}}
+				{{--<a href="https://forge.laravel.com">--}}
+					{{--<img src="/assets/img/forge-logo.png" alt="Forge">--}}
+				{{--</a>--}}
+				{{--<p>Instant PHP Platforms On Linode, DigitalOcean, and more. Push to deploy, PHP 5.6, HHVM, queues, and everything you need to launch and deploy amazing Laravel applications.</p>--}}
+				{{--<p>Launch your application in minutes!</p>--}}
+			{{--</div>--}}
+		{{--</div>--}}
+		{{--<div class="tiles">--}}
+			{{--<div class="tile">--}}
+				{{--<h2><a href="/docs/homestead">Homestead</a></h2>--}}
+				{{--<p>The official Laravel local development environment. Powered by Vagrant, Homestead gets your entire team on the same page with the latest PHP, MySQL, Postgres, Redis, and more.</p>--}}
+			{{--</div>--}}
+			{{--<div class="tile">--}}
+				{{--<h2><a href="https://laracasts.com">Laracasts</a></h2>--}}
+				{{--<p>Hundreds (yes, hundreds) of Laravel and PHP video tutorials with new videos added every week! Skim the basics or start your journey to Laravel mastery. All for the price of lunch.</p>--}}
+			{{--</div>--}}
+			{{--<div class="tile">--}}
+				{{--<h2>Power Packed</h2>--}}
+				{{--<p>Laravel is amazing out of the box, but there's more to explore! Let <a href="/docs/billing">Cashier</a> make subscription billing painless, or use <a href="/docs/authentication#social-authentication">Socialite</a> to authenticate with Facebook, Twitter, and more.</p>--}}
+			{{--</div>--}}
+		{{--</div>--}}
+	{{--</section>--}}
 @endsection
