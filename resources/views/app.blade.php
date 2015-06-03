@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="pt_BR">
 <head>
 	<meta charset="utf-8">
 	<title>{{ isset($title) ? $title . ' - ' : null }} Laravel - O Framework PHP para os Artesãos da Web</title>
