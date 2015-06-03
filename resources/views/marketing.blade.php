@@ -64,7 +64,7 @@ class Idea extends Eloquent {
 </section>
 
 <section class="panel features dark" id="features">
-	<h1>Alguém disse ráido?</h1>
+	<h1>Alguém disse rápido?</h1>
 	<p>Aplicações elegantes entregues em velocidade dobrada.</p>
 		<div class="blocks stacked">
 			<div class="block odd">
