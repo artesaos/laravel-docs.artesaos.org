@@ -28,7 +28,14 @@ class CloneDocs extends Command {
 	 */
 	public function handle()
 	{
-		shell_exec('cd '.base_path('resources/docs')." && git clone git@github.com:artesaos/laravel-docs.git master");
+		$dir = base_path('resources/docs');
+
+		if(is_dir($dir."/master")){
+			$this->call('docs:pull');
+		}
+		else{
+			shell_exec('cd '.$dir." && git clone git@github.com:artesaos/laravel-docs.git master");
+		}
 	}
 
 }

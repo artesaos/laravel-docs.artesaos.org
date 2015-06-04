@@ -25,6 +25,14 @@ class UpdateDocs extends Command {
 	 */
 	public function handle()
 	{
-		shell_exec('cd '.base_path('resources/docs/master')." && git pull origin master");
+		$dir = base_path('resources/docs/master');
+
+		if(is_dir($dir)){
+			shell_exec('cd '.$dir." && git pull origin master");
+		}
+
+		else{
+			$this->call("docs:clone");
+		}
 	}
 }

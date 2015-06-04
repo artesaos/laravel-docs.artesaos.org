@@ -32,17 +32,17 @@
 		"post-install-cmd": [
 			"php artisan clear-compiled",
 			"php artisan optimize",
-            "php artisan docs:clone"
+		        "php artisan docs:pull"
 		],
 		"post-update-cmd": [
 			"php artisan clear-compiled",
 			"php artisan optimize",
-            "php artisan docs:pull"
+			"php artisan docs:pull"
 		],
 		"post-create-project-cmd": [
 			"php -r \"copy('.env.example', '.env');\"",
 			"php artisan key:generate",
-            "php artisan docs:clone"
+		 	"php artisan docs:clone"
 		]
 	},
 	"config": {
