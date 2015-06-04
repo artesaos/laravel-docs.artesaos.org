@@ -29,6 +29,9 @@
 
 	<article>
 		{!! $content !!}
+
+        <h1>Comentários</h1>
+        @include('disqus::comments')
 	</article>
 </div>
 @endsection
