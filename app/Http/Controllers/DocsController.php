@@ -88,9 +88,7 @@ class DocsController extends Controller {
 	 */
 	protected function getDocVersions()
 	{
-		return [
-			'master' => 'Master'
-		];
+		return config('git-repos.docs-versions');
 	}
 
 }

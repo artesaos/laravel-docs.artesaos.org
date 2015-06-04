@@ -12,8 +12,8 @@ class Kernel extends ConsoleKernel {
 	 */
 	protected $commands = [
 		'App\Console\Commands\Inspire',
-		'App\Console\Commands\CloneDocs',
-		'App\Console\Commands\UpdateDocs',
+		'App\Console\Commands\GitCloneDocs',
+		'App\Console\Commands\GitPullDocs',
 	];
 
 	/**
