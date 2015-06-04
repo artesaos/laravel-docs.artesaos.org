@@ -11,7 +11,8 @@
 	<!--[if lte IE 9]>
 		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
-	<link rel="stylesheet" href="/assets/css/laravel.css">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700,200italic,400italic,700italic"/>
+	<link rel="stylesheet" href="{{url(elixir('assets/css/laravel.css'))}}">
 </head>
 <body class="@yield('body-class', 'docs') language-php">
 
@@ -47,6 +48,6 @@
 		<p>Laravel é uma marca registrada de Taylor Otwell. Copyright &copy; Taylor Otwell.</p>
 		<p class="less-significant"><a href="http://jackmcdade.com">Design by Jack McDade</a></p>
 	</footer>
-	<script src="/assets/js/laravel.js"></script>
+	<script src="{{url(elixir('assets/js/laravel.js'))}}"></script>
 </body>
 </html>
