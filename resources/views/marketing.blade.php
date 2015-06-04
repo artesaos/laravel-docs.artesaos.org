@@ -163,4 +163,6 @@ Route::get('/user/{id}', function($id)
 				</div>
 			</div><!-- /.block -->
 		</div>
+    </div>
+</section>
 @endsection
