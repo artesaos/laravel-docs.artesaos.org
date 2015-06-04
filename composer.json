@@ -21,7 +21,10 @@
 		"psr-4": {
 			"App\\": "app/",
             "Vluzrmos\\Disqus\\": "disqus/src/"
-		}
+		},
+        "files":[
+          "app/Support/helpers.php"
+        ]
 	},
 	"autoload-dev": {
 		"classmap": [
