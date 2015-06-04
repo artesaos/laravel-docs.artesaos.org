@@ -9,7 +9,7 @@
 	<meta name="keywords" content="laravel, php, framework, web, artisans, artesãos, Laravel Brasil">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!--[if lte IE 9]>
-		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 	<link rel="stylesheet" href="/assets/css/laravel.css">
 </head>

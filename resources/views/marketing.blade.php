@@ -163,39 +163,4 @@ Route::get('/user/{id}', function($id)
 				</div>
 			</div><!-- /.block -->
 		</div>
-		{{--<a href="#ecosystem" class="next-up">--}}
-			{{--The Laravel Ecosystem--}}
-			{{--<img src="/assets/img/down-arrow.png">--}}
-		{{--</a>--}}
-	{{--</section>--}}
-
-	{{--<section class="panel ecosystem light" id="ecosystem">--}}
-		{{--<h1>Ecossistema do Laravel</h1>--}}
-		{{--<p>RevolucioneRevolutionize how you build the web.</p>--}}
-
-		{{--<div class="forge contain">--}}
-			{{--<img src="/assets/img/forge-macbook.png" alt="Forge Dashboard" class="screenshot">--}}
-			{{--<div class="content">--}}
-				{{--<a href="https://forge.laravel.com">--}}
-					{{--<img src="/assets/img/forge-logo.png" alt="Forge">--}}
-				{{--</a>--}}
-				{{--<p>Instant PHP Platforms On Linode, DigitalOcean, and more. Push to deploy, PHP 5.6, HHVM, queues, and everything you need to launch and deploy amazing Laravel applications.</p>--}}
-				{{--<p>Launch your application in minutes!</p>--}}
-			{{--</div>--}}
-		{{--</div>--}}
-		{{--<div class="tiles">--}}
-			{{--<div class="tile">--}}
-				{{--<h2><a href="/docs/homestead">Homestead</a></h2>--}}
-				{{--<p>The official Laravel local development environment. Powered by Vagrant, Homestead gets your entire team on the same page with the latest PHP, MySQL, Postgres, Redis, and more.</p>--}}
-			{{--</div>--}}
-			{{--<div class="tile">--}}
-				{{--<h2><a href="https://laracasts.com">Laracasts</a></h2>--}}
-				{{--<p>Hundreds (yes, hundreds) of Laravel and PHP video tutorials with new videos added every week! Skim the basics or start your journey to Laravel mastery. All for the price of lunch.</p>--}}
-			{{--</div>--}}
-			{{--<div class="tile">--}}
-				{{--<h2>Power Packed</h2>--}}
-				{{--<p>Laravel is amazing out of the box, but there's more to explore! Let <a href="/docs/billing">Cashier</a> make subscription billing painless, or use <a href="/docs/authentication#social-authentication">Socialite</a> to authenticate with Facebook, Twitter, and more.</p>--}}
-			{{--</div>--}}
-		{{--</div>--}}
-	{{--</section>--}}
 @endsection
