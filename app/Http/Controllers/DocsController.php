@@ -50,12 +50,6 @@ class DocsController extends Controller {
 
 		$section = '';
 
-		if ($this->docs->sectionExists($version, $page)) {
-			$section .= '/'.$page;
-		} elseif ( ! is_null($page)) {
-			return redirect('/docs/'.$version);
-		}
-
 		if (is_null($content)) {
 			abort(404);
 		}
