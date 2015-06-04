@@ -25,7 +25,7 @@ class UpdateDocs extends Command {
 	 */
 	public function handle()
 	{
-		$dir = base_path('resources/docs/master');
+		$dir = realpath(base_path('resources/docs/master'));
 
 		if(is_dir($dir)){
 			shell_exec('cd '.$dir." && git pull origin master");

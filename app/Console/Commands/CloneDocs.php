@@ -28,7 +28,7 @@ class CloneDocs extends Command {
 	 */
 	public function handle()
 	{
-		$dir = base_path('resources/docs');
+		$dir = realpath(base_path('resources/docs'));
 
 		if(is_dir($dir."/master")){
 			$this->call('docs:pull');
