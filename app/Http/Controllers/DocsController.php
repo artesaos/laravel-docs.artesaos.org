@@ -46,12 +46,16 @@ class DocsController extends Controller {
 
 		$content = $this->docs->get($version, $page ?: 'installation');
 
+		if (is_null($content)) {
+			abort(404);
+		}
+
 		$title = (new Crawler(utf8_decode($content)))->filterXPath('//h1');
 
 		$section = '';
-
-		if (is_null($content)) {
-			abort(404);
+ 		 
+		if ($this->docs->sectionExists($version, $page)) {		
+			$section .= '/'.$page;		
 		}
 
 		return view('docs', [
