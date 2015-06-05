@@ -15,9 +15,14 @@ class GitRepoService{
 			$repoConfig = $this->repoConfig($repo);
 			$repoDir = $this->getRepoDir($repo);
 
-			shell_exec('rm -rf '.$repoDir);
+			$this->execShellCommand('rm -rf :repo_dir', ["repo_dir" => $repoDir]);
 
-			shell_exec('cd '.$docsDir." && git clone ".$repoConfig['url']." ".$repo. " && git checkout ".$repoConfig['branch']);
+			$this->execShellCommand("cd :docs_dir && git clone :repo_url :path && cd :path && git checkout :branch", [
+				"docs_dir"	=> $docsDir,
+				"repo_url"	=> $repoConfig['url'],
+				"path"		=> $repo,
+				"branch"	=> $repoConfig['branch']
+			]);
 		}
 	}
 
@@ -28,8 +33,6 @@ class GitRepoService{
 	public function pullRepo($repos = null){
 		$repos = $this->parseRepos($repos);
 
-		$docsDir = $this->getDocsDir();
-
 		foreach($repos as $repo){
 			$repoConfig = $this->repoConfig($repo);
 
@@ -39,9 +42,23 @@ class GitRepoService{
 				$this->cloneRepo($repo);
 			}
 			else{
-				shell_exec('cd '.$repoDir." && git pull && git checkout ".$repoConfig['branch']);
+				$this->execShellCommand("cd :repo_dir && git pull && git checkout :branch", [
+					'repo_dir' => $repoDir,
+					'branch'   => $repoConfig['branch']
+				]);
 			}
 		}
+	}
+
+	/**
+	 * Execs a shell command
+	 * @param       $command
+	 * @param array $bindings
+	 *
+	 * @return string
+	 */
+	public function execShellCommand($command, array $bindings = []){
+		return shell_exec(str_bind($command, $bindings));
 	}
 
 	/**
