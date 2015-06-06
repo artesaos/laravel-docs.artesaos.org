@@ -1,6 +1,6 @@
 <?php
 
-if(!function_exists('remove_http_protocol')){
+if(!function_exists('remove_http_scheme')){
 	/**
 	 * Remove scheme http or https from a given url
 	 * @param $url
@@ -12,7 +12,7 @@ if(!function_exists('remove_http_protocol')){
 	}
 }
 
-if(!function_exists('url_without_prococol')){
+if(!function_exists('url_without_scheme')){
 
 	/**
 	 *
@@ -26,7 +26,7 @@ if(!function_exists('url_without_prococol')){
 	}
 }
 
-if(!function_exists('elixir_without_prococol')) {
+if(!function_exists('elixir_wihout_scheme')) {
 	/**
 	 *
 	 * Generate a elixir full url without scheme (http or https)
