@@ -17,7 +17,7 @@ class GitRepoService{
 
 			$this->execShellCommand('rm -rf :repo_dir', ["repo_dir" => $repoDir]);
 
-			$this->execShellCommand("cd :docs_dir && git clone --depth 1 :repo_url :path && cd :path && git checkout :branch", [
+			$this->execShellCommand("cd :docs_dir && git clone --depth 1 --branch :branch :repo_url :path", [
 				"docs_dir"	=> $docsDir,
 				"repo_url"	=> $repoConfig['url'],
 				"path"		=> $repo,
