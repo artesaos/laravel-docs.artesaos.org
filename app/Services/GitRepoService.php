@@ -115,12 +115,21 @@ class GitRepoService{
 	}
 
 	/**
-	 * Return the enabled repos
+	 * Return an array of the enabled repos like [path => title, ...]
 	 *
 	 * @return array
 	 */
 	public function enabledRepos(){
-		return config('git-repos.enabled', []);
+		$repos = config('git-repos.repositories', []);
+		$enabled = [];
+
+		foreach($repos as $path => $repo){
+			if($repo['enabled']){
+				$enabled[$path] = $repo['title'];
+			}
+		}
+
+		return $enabled;
 	}
 
 	/**

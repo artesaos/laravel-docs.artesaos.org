@@ -31,9 +31,9 @@ class Documentation {
 	/**
 	 * Create a new documentation instance.
 	 *
-	 * @param  Filesystem  $files
-	 * @param  Cache  $cache
-	 * @return void
+	 * @param  Filesystem                  $files
+	 * @param  Cache                       $cache
+	 * @param \App\Services\GitRepoService $git
 	 */
 	public function __construct(Filesystem $files, Cache $cache, GitRepoService $git)
 	{
@@ -134,16 +134,7 @@ class Documentation {
 	 * @return array
 	 */
 	public function getDocsEnabledVersions(){
-		$repos = config('git-repos.repositories', []);
-		$enabled = [];
-
-		foreach($repos as $path => $repo){
-			if($repo['enabled']){
-				$enabled[$path] = $repo['title'];
-			}
-		}
-
-		return $enabled;
+		return $this->git->enabledRepos();
 	}
 
 
