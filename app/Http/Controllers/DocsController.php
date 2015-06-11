@@ -1,7 +1,6 @@
 <?php namespace App\Http\Controllers;
 
 use App\Documentation;
-use Symfony\Component\DomCrawler\Crawler;
 
 class DocsController extends Controller {
 
@@ -44,13 +43,11 @@ class DocsController extends Controller {
 			return redirect('docs/'.DEFAULT_VERSION.'/'.$version, 301);
 		}
 
-		$content = $this->docs->get($version, $page ?: 'installation');
+		$doc = $this->docs->get($version, $page ?: 'installation');
 
-		if (is_null($content)) {
+		if (is_null($doc['content'])) {
 			abort(404);
 		}
-
-		$title = (new Crawler(utf8_decode($content)))->filterXPath('//h1');
 
 		$section = '';
  		 
@@ -59,9 +56,9 @@ class DocsController extends Controller {
 		}
 
 		return view('docs', [
-			'title' => count($title) ? $title->text() : null,
+			'title' => $doc['title'],
 			'index' => $this->docs->getIndex($version),
-			'content' => $content,
+			'content' => $doc['content'],
 			'currentVersion' => $version,
 			'versionTitle' => $this->versionTitle($version),
 			'versions' => $this->getDocVersions(),

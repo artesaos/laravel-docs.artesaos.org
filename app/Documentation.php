@@ -3,6 +3,7 @@
 use App\Services\GitRepoService;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Contracts\Cache\Repository as Cache;
+use Symfony\Component\DomCrawler\Crawler;
 
 class Documentation {
 
@@ -68,7 +69,7 @@ class Documentation {
 	 */
 	public function get($version, $page)
 	{
-		return $this->cache->remember('docs.'.$version.'.'.$page, 5, function() use ($version, $page) {
+		$content = $this->cache->remember('docs.'.$version.'.'.$page, 5, function() use ($version, $page) {
 			$path = $this->git->getRepoViewsDir($version)."/{$page}.md";
 
 			if ($this->files->exists($path)) {
@@ -77,7 +78,23 @@ class Documentation {
 
 			return null;
 		});
+
+		$title = $content? $this->getDocTitleByContent($content): null;
+
+		return compact('content', 'title');
 	}
+
+	/**
+	 * Get doc Title by Content
+	 * @param  string $content mardown parsed string
+	 * @return string
+	 */
+	public function getDocTitleByContent($content){
+		$title = (new Crawler(utf8_decode($content)))->filterXPath('//h1');
+		
+		return $title ? $title->text() : null;
+	}
+
 
 	/**
 	 * Replace the version place-holder in links.
