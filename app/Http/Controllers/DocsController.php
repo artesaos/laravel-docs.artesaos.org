@@ -57,7 +57,7 @@ class DocsController extends Controller {
 			'content' => $doc['content'],
 			'currentVersion' => $version,
 			'versionTitle' => $this->versionTitle($version),
-			'versions' => $this->getDocVersions(),
+			'versions' => $this->getEnabledVersions(),
 			'currentSection' => $section,
 		]);
 	}
@@ -70,7 +70,9 @@ class DocsController extends Controller {
 	 */
 	protected function isVersion($version)
 	{
-		return in_array($version, array_keys($this->getDocVersions()));
+		//dd($this->getEnabledVersions());
+
+		return in_array($version, array_keys($this->getEnabledVersions()));
 	}
 
 	/**
@@ -79,7 +81,7 @@ class DocsController extends Controller {
 	 * @return string
 	 */
 	protected function versionTitle($version){
-		return array_get($this->getDocVersions(), $version);
+		return array_get($this->getEnabledVersions(), $version);
 	}
 
 	/**
@@ -87,9 +89,9 @@ class DocsController extends Controller {
 	 *
 	 * @return array
 	 */
-	protected function getDocVersions()
+	protected function getEnabledVersions()
 	{
-		return config('git-repos.docs-versions');
+		return $this->docs->getDocsEnabledVersions();
 	}
 
 }

@@ -3,6 +3,7 @@
 use App\Services\GitRepoService;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Contracts\Cache\Repository as Cache;
+use Illuminate\Support\Collection;
 use Symfony\Component\DomCrawler\Crawler;
 
 class Documentation {
@@ -127,5 +128,24 @@ class Documentation {
 	{
 		return $this->files->exists($this->git->getRepoViewsDir($version)."/{$page}.md");
 	}
+
+	/**
+	 * Return an array [path => title] of the enabled docs
+	 * @return array
+	 */
+	public function getDocsEnabledVersions(){
+		$repos = config('git-repos.repositories', []);
+		$enabled = [];
+
+		foreach($repos as $path => $repo){
+			if($repo['enabled']){
+				$enabled[$path] = $repo['title'];
+			}
+		}
+
+		return $enabled;
+	}
+
+
 
 }

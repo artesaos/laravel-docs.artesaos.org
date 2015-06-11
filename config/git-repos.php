@@ -1,37 +1,14 @@
 <?php return [
-	
+	/*
+	 * Git repositories
+	 * To download all enabled repos just use the artisan command:
+	 * php artisan git:docs:clone
+	 */
+
 	/*
 	 * Default version to be displayed 
 	 */
 	'default-version' => 'master',
-
-	/*
-	 * Versions to show on switcher menu
-	 */
-	'enabled' => [
-		'master', 
-		'master-en_US',
-
-		'5.1', 
-		'5.1-en_US', 
-
-		'5.0', 
-		'5.0-en_US'
-	],
-	
-	/*
-	 * "path" => "readable name of the version"
-	 */
-	'docs-versions' => [
-		'master' => 'Master',
-		'master-en_US' => 'Master English',
-
-		'5.1'  => '5.1',
-		'5.1-en_US'  => '5.1 English',
-
-		'5.0' => '5.0',
-		'5.0-en_US' => '5.0 English'
-	],
 
 	/*
 	 * Git repositories 
@@ -45,37 +22,49 @@
 		'master' => [
 			'url' => 'https://github.com/artesaos/laravel-docs.git',
 			'branch' => 'master',
-			'view-path' => 'pt_BR'
+			'view-path' => 'pt_BR',
+			'title' => 'Master',
+			'enabled' => true
 		],
 
 		'master-en_US' => [
 			'url' => 'https://github.com/laravel/docs.git',
 			'branch' => 'master',
-			'view-path' => ''
+			'view-path' => '',
+			'title' => 'Master English',
+			'enabled' => true
 		],
 
 		'5.1' => [
 			'url' => 'https://github.com/artesaos/laravel-docs.git',
 			'branch' => 'master',
-			'view-path' => 'pt_BR'
+			'view-path' => 'pt_BR',
+			'title' => '5.1',
+			'enabled' => true
 		],
 
 		'5.1-en_US' => [
 			'url' => 'https://github.com/laravel/docs.git',
 			'branch' => '5.1',
-			'view-path' => ''
+			'view-path' => '',
+			'title' => '5.1 English',
+			'enabled' => true
 		],
 
 		'5.0' => [
 			'url' => 'https://github.com/rhchristian/laravel-docs-pt-br.git',
 			'branch' => 'master',
-			'view-path' => ''
+			'view-path' => '',
+			'title' => '5.0',
+			'enabled' => true
 		],
 
 		'5.0-en_US' => [
 			'url' => 'https://github.com/laravel/docs.git',
 			'branch' => '5.0',
-			'view-path' => ''
+			'view-path' => '',
+			'title' => '5.0 English',
+			'enabled' => true
 		],
 	],
 
