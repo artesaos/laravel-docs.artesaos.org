@@ -63,6 +63,7 @@ class DocsController extends Controller {
 			'index' => $this->docs->getIndex($version),
 			'content' => $content,
 			'currentVersion' => $version,
+			'versionTitle' => $this->versionTitle($version),
 			'versions' => $this->getDocVersions(),
 			'currentSection' => $section,
 		]);
@@ -77,6 +78,15 @@ class DocsController extends Controller {
 	protected function isVersion($version)
 	{
 		return in_array($version, array_keys($this->getDocVersions()));
+	}
+
+	/**
+	 * Get the readable version title
+	 * @param  string $version
+	 * @return string
+	 */
+	protected function versionTitle($version){
+		return array_get($this->getDocVersions(), $version);
 	}
 
 	/**

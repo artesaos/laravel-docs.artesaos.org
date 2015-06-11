@@ -1,7 +1,7 @@
 <div class="switcher">
 	<div class="dropdown">
 		<button class="btn dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-			{{ ucfirst($currentVersion) }}
+			{{ ucfirst($versionTitle) }}
 			<span class="caret"></span>
 		</button>
 		<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
