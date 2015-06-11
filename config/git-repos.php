@@ -1,6 +1,27 @@
 <?php return [
-	'enabled' => ['master', 'master-en_US', '5.1', '5.1-en_US', '5.0', '5.0-en_US'],
+	
+	/*
+	 * Default version to be displayed 
+	 */
+	'default-version' => 'master',
 
+	/*
+	 * Versions to show on switcher menu
+	 */
+	'enabled' => [
+		'master', 
+		'master-en_US',
+
+		'5.1', 
+		'5.1-en_US', 
+
+		'5.0', 
+		'5.0-en_US'
+	],
+	
+	/*
+	 * "path" => "readable name of the version"
+	 */
 	'docs-versions' => [
 		'master' => 'Master',
 		'master-en_US' => 'Master English',
@@ -12,6 +33,14 @@
 		'5.0-en_US' => '5.0 English'
 	],
 
+	/*
+	 * Git repositories 
+	 * "folder to clone (unique)" => [
+	 *    "url" => "https://git url"
+	 *    "branch" => "branch to checkout"
+	 *    "view-path" => "sub-path of 'folder' to be displayed"
+	 * ]
+	 */
 	'repositories' => [
 		'master' => [
 			'url' => 'https://github.com/artesaos/laravel-docs.git',

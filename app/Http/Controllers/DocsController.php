@@ -29,7 +29,7 @@ class DocsController extends Controller {
 	 */
 	public function showRootPage()
 	{
-		return redirect('docs/'.DEFAULT_VERSION);
+		return redirect('docs/'.$this->docs->defaultVersion());
 	}
 
 	/**
@@ -40,7 +40,7 @@ class DocsController extends Controller {
 	public function show($version, $page = null)
 	{
 		if ( ! $this->isVersion($version)) {
-			return redirect('docs/'.DEFAULT_VERSION.'/'.$version, 301);
+			return redirect('docs/'.$this->docs->defaultVersion().'/'.$version, 301);
 		}
 
 		if (!$this->docs->sectionExists($version, $page ?: 'installation')) {	
@@ -48,7 +48,7 @@ class DocsController extends Controller {
 		}
 
 		$section = '/'.$page;
-		
+
 		$doc = $this->docs->get($version, $page ?: 'installation');
 
 		return view('docs', [

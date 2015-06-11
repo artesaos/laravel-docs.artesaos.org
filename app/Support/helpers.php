@@ -1,5 +1,22 @@
 <?php
 
+
+if(!defined('DEFAULT_VERSION')){
+	/**
+	 * Set the default documentation version...
+	 */
+	define('DEFAULT_VERSION', 'master');
+};
+
+if(!function_exists('markdown')){
+	/**
+	 * Convert some text to Markdown...
+	 */
+	function markdown($text) {
+		return (new ParsedownExtra)->text($text);
+	}
+}
+
 if(!function_exists('remove_http_scheme')){
 	/**
 	 * Remove scheme http or https from a given url
@@ -50,7 +67,7 @@ if(!function_exists('str_bind')){
 	 * @exemple str_bind("Hello :name!", ["name" => "World"]) // "Hello World!"
 	 * @return mixed
 	 */
-	function str_bind($str, array $replace = [])
+	function str_bind($str, $replace = [])
 	{
 			$replace = array_sort($replace, function ($value, $key) {
 				return mb_strlen($key) * -1;

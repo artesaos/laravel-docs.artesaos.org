@@ -95,6 +95,14 @@ class Documentation {
 		return $title ? $title->text() : null;
 	}
 
+	/**
+	 * Return default version of git repos
+	 * @return string by default will return "master"
+	 */
+	public function defaultVersion(){
+		return config('git-repos.default-version', 'master');
+	}
+	
 
 	/**
 	 * Replace the version place-holder in links.

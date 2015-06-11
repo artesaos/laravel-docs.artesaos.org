@@ -11,18 +11,6 @@
 |
 */
 
-/**
- * Set the default documentation version...
- */
-define('DEFAULT_VERSION', 'master');
-
-/**
- * Convert some text to Markdown...
- */
-function markdown($text) {
-	return (new ParsedownExtra)->text($text);
-}
-
 get('/', function() {
 	return view('marketing');
 });
