@@ -43,17 +43,13 @@ class DocsController extends Controller {
 			return redirect('docs/'.DEFAULT_VERSION.'/'.$version, 301);
 		}
 
+		if (!$this->docs->sectionExists($version, $page ?: 'installation')) {	
+			abort(404);	
+		}
+
+		$section = '/'.$page;
+		
 		$doc = $this->docs->get($version, $page ?: 'installation');
-
-		if (is_null($doc['content'])) {
-			abort(404);
-		}
-
-		$section = '';
- 		 
-		if ($this->docs->sectionExists($version, $page)) {		
-			$section .= '/'.$page;		
-		}
 
 		return view('docs', [
 			'title' => $doc['title'],
