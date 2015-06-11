@@ -1,13 +1,5 @@
 <?php
 
-
-if(!defined('DEFAULT_VERSION')){
-	/**
-	 * Set the default documentation version...
-	 */
-	define('DEFAULT_VERSION', 'master');
-};
-
 if(!function_exists('markdown')){
 	/**
 	 * Convert some text to Markdown...
