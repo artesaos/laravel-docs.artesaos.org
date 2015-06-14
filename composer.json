@@ -36,12 +36,12 @@
 	"scripts": {
 		"post-install-cmd": [
 			"php artisan clear-compiled",
-			"php artisan optimize",
+			"php artisan optimize --force",
 		    "php artisan git:docs:clone"
 		],
 		"post-update-cmd": [
 			"php artisan clear-compiled",
-			"php artisan optimize",
+			"php artisan optimize --force",
 			"php artisan git:docs:clone"
 		],
 		"post-create-project-cmd": [
