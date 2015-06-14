@@ -11,8 +11,8 @@
 |
 */
 
-get('/', function() {
-	return view('marketing');
+get('/', function () {
+    return view('marketing');
 });
 
 get('docs', 'DocsController@showRootPage');
