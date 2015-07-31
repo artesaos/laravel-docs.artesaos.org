@@ -9,7 +9,7 @@
 	<ul class="dropdown-menu" role="menu">
 		<li><a href="https://github.com/artesaos" target="_blank">Artesãos</a></li>
 		<li class="divider"></li>
-		<li><a href="http://laravelbrasil.vluzrmos.com.br" target="_blank">Slack Laravel Brasil</a></li>
+		<li><a href="http://slack.laravel.com.br" target="_blank">Slack Laravel Brasil</a></li>
         <li><a href="https://laravel.com.br" target="_blank">Blog Laravel Brasil</a></li>
 	</ul>
 </li>

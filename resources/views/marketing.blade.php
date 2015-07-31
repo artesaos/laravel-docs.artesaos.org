@@ -69,7 +69,7 @@ class Idea extends Eloquent {
 		<div class="blocks stacked">
 			<div class="block odd">
 				<div class="text">
-					<h2>Expressiva e linda sintaxe.</h2>
+					<h2>Sintaxe linda e expressiva.</h2>
                     <p>
                         Valoriza elegância, simplicidade e legibilidade? Você vai se encaixar bem. Laravel é projetado para pessoas como você. Se você precisar de ajuda para começar, veja o <a href="https://codecasts.com.br">Codecasts</a> e nossa <a href="/docs">grande documentação</a>.
                     </p>
