@@ -15,7 +15,7 @@
 	<link rel="stylesheet" href="{{elixir_wihout_scheme('assets/css/laravel.css')}}">
 </head>
 <body class="@yield('body-class', 'docs') language-php">
-
+<!--email_off-->
 	<span class="overlay"></span>
 
 	<nav class="main">
@@ -49,5 +49,6 @@
 		<p class="less-significant"><a href="http://jackmcdade.com">Design by Jack McDade</a></p>
 	</footer>
 	<script src="{{elixir_wihout_scheme('assets/js/laravel.js')}}"></script>
+<!--/email_off-->
 </body>
 </html>
