@@ -35,13 +35,13 @@ class GitRepoService
     {
         $repos = $this->parseRepos($repos);
 
-        foreach ($repos as $repo) {
-            $repoConfig = $this->repoConfig($repo);
+        foreach ($repos as $path => $title) {
+            $repoConfig = $this->repoConfig($path);
 
-            $repoDir = $this->getRepoDir($repo);
+            $repoDir = $this->getRepoDir($path);
 
             if (!is_dir($repoDir)) {
-                $this->cloneRepo($repo);
+                $this->cloneRepo($path);
             } else {
                 $this->execShellCommand("cd :repo_dir && git pull && git checkout :branch", [
                     'repo_dir' => $repoDir,

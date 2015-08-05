@@ -5,6 +5,7 @@
 	<title>{{ isset($title) ? $title . ' - ' : null }} Laravel - O Framework PHP para os Artesãos da Web</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="author" content="Taylor Otwell">
+	<meta name="author" content="Vagner do Carmo">
 	<meta name="description" content="Laravel - O Framework PHP para os Artesãos da Web">
 	<meta name="keywords" content="laravel, php, framework, web, artisans, artesãos, Laravel Brasil">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -29,7 +30,7 @@
 				<a href="#" class="toggle-slide menu-link btn">&#9776;</a>
 			</div>
 
-			@if (Request::is('docs*') && isset($currentVersion))
+			@if (request()->is('docs*') && isset($currentVersion))
 				@include('partials.switcher')
 			@endif
 

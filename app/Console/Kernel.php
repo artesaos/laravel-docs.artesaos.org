@@ -13,9 +13,8 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        'App\Console\Commands\Inspire',
-        'App\Console\Commands\GitCloneDocs',
-        'App\Console\Commands\GitPullDocs',
+        \App\Console\Commands\GitCloneDocs::class,
+        \App\Console\Commands\GitPullDocs::class,
     ];
 
     /**

@@ -3,6 +3,8 @@
 if (!function_exists('markdown')) {
     /**
      * Convert some text to Markdown...
+     * @param $text
+     * @return string
      */
     function markdown($text)
     {
@@ -56,10 +58,10 @@ if (!function_exists('elixir_wihout_scheme')) {
 if (!function_exists('str_bind')) {
 
     /**
-     * Bind a associative array values to equivalente on string with colons.
-     * @param       $str
+     * Bind a associative array values to equivalent on string with colons.
+     * @param string $str
      * @param array $replace
-     * @exemple str_bind("Hello :name!", ["name" => "World"]) // "Hello World!"
+     * @example str_bind("Hello :name!", ["name" => "World"]) // "Hello World!"
      * @return mixed
      */
     function str_bind($str, $replace = [])
@@ -74,4 +76,16 @@ if (!function_exists('str_bind')) {
 
         return $str;
     }
+}
+
+if (!function_exists('request')) {
+    /**
+     * Get the Request instance.
+     *
+     * @return \Illuminate\Http\Request
+     */
+   function request()
+   {
+       return app('request');
+   }
 }
