@@ -35,6 +35,22 @@
 			'enabled' => true
 		],
 
+		'5.2' => [
+			'url' => 'https://github.com/artesaos/laravel-docs.git',
+			'branch' => '5.2',
+			'view-path' => 'pt_BR',
+			'title' => '5.2',
+			'enabled' => true
+		],
+
+		'5.2-en_US' => [
+			'url' => 'https://github.com/laravel/docs.git',
+			'branch' => '5.2',
+			'view-path' => '',
+			'title' => '5.2 English',
+			'enabled' => true
+		],
+		
 		'5.1' => [
 			'url' => 'https://github.com/artesaos/laravel-docs.git',
 			'branch' => 'master',
