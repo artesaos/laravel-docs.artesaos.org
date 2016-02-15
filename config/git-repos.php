@@ -53,7 +53,7 @@
 		
 		'5.1' => [
 			'url' => 'https://github.com/artesaos/laravel-docs.git',
-			'branch' => 'master',
+			'branch' => '5.1',
 			'view-path' => 'pt_BR',
 			'title' => '5.1',
 			'enabled' => true
